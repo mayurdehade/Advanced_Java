@@ -1,0 +1,78 @@
+1) create maven project (give name and artifact id)
+
+2) create packages
+	- entity
+	- controller
+	- operation
+
+3) Add dependencies pom.xml
+	add dependency mysql 8 and hibernate core
+	<dependencies>
+		mysql 8 and hibernate core
+	</dependencies>
+
+4) create hibernate.cfg.xml (configuration file which helps to connect to database)
+	- url, username, password, driver
+	
+	
+	- auto table creation 
+	<property name="hibernate.hbm2ddl.auto">update</property>
+
+5) create entity class
+	- Player
+	player id
+	player name
+	player jersey
+	player runs
+
+6) create Controller Class
+	PlayerController
+	Configuration cfg = new Configuration();
+	cfg.configure().addAnnotatedClass();
+	SessionFactory sf = cfg.buildSessionFactory();
+	Session sess = sf.openSession;
+	
+	calling method of operation class
+
+7) create operation class
+write some methods
+
+hibernate automatic table creation
+hibernate.hbm2ddl.auto
+
+
+Shortcut
+alt + shift + L --> left side auto completion
+ctrl + shift + F --> Format document
+
+to string method represent the object
+if to string method is not there then it return the object memory location
+
+
+//Restriction 24-7-24
+filtering + Non Primary Column + any operator 
+
+//Multiple condition 25-7-24
+and, or
+
+//Projection
+
+Session
+	Criteria
+		Restrictions
+		Projections
+		
+How to achive restriction?
+Criteria.add()
+
+How to achive projection?
+Criteria.setProjection()
+
+//get specified column
+Select id from tablename;
+use Projection.property("variablename");
+
+for multiple columns
+use Projection.projectionList();
+projectionList.add(Projection.property());
+criterial.setProjection(projectionList());
