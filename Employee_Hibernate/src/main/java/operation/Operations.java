@@ -204,6 +204,7 @@ public class Operations {
 			a.setCountry(sc.next());
 			e.setAddress(a);
 			sesn.save(e);
+			
 		}
 		
 		tx.commit();
