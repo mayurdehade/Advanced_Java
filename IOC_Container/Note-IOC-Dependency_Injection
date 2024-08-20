@@ -1,0 +1,36 @@
+- Dependency Injection
+    - Classes should not instantiate their dependency or create new object
+    - Classes should only use the object that is given to them (Creating and using are two different things)
+    - There should be a separate injector class who will create object and then give the created object to the  class who needs that object.
+    - So the injector class will be responsible for passing or injecting a dependency.
+    - This is called dependency injection.
+    - three types:
+        1. constructor injection : Dependency is passed via constructor
+        2. setter injection : Dependency is passed via setter
+        3. method injection : Dependency is passed via method
+        
+        
+- Inversion of Control (IOC)
+    - the container maintains all the classes including the dependency classes
+    - objects are inserted during runtime or startup by Appconfig.java or appContext.xml
+    - Instead of pushing the dependency, the object accepts the dependency during it's creation through constructor or setter
+        - Constructor injection : If the class cannot operate without dependency, it should be through constructor injection
+        - Setter injection : If the class can treat the dependency as optional or can accept multiple variable types of dependency, it should be through setter injection
+
+- Without dependency injection
+    - You want contstruct main
+    - Main needs dependency of Class A
+    - So you need to create object of class A and provide that to main
+    - Main needs dependency of Class B
+    - So you need to create object of class B and provide that to main
+    - Class B needs dependency of class X and class Y
+    - You need to create onject of class X and object of class Y and provide them inside the object of class B
+    - You then need to give the constructed object of class B to class Main
+
+- With dependency injection
+    - You want to construct main
+    - IoC container manages all classes
+    - Main has dependencies
+    - Instead of constructing the objects, main only takes constructor arguments
+    - IoC container handles the construction of the objects which main needs by looking at the constructor arguments
+    - Framework is in control of the injection of these dependencies according to needs

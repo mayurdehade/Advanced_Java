@@ -1,3 +1,6 @@
+//IOC: Inversion of Control
+//Singleton: means single bean definition to a single object instance per Spring IOC container. 
+//Prototype: means a single bean definition to any number of object instances.
 package com.jbk;
 
 import org.apache.catalina.core.ApplicationContext;
@@ -17,11 +20,14 @@ public class IocContainerApplication {
 		//if @Component annotation is not there then exception is occur no such bean available
 		Student bean = context.getBean(Student.class);
 		
+		Student bean2 = context.getBean(Student.class);
+		
 		System.out.println(bean);
+		System.out.println(bean2);
 //		Student s = new Student(123, "xyz");
-		
-		
-		
+			
 	}
 
 }
+
+
