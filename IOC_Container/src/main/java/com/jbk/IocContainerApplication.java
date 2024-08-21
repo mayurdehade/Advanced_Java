@@ -1,4 +1,6 @@
 //IOC: Inversion of Control
+
+//Scope of bean:
 //Singleton: means single bean definition to a single object instance per Spring IOC container. 
 //Prototype: means a single bean definition to any number of object instances.
 package com.jbk;

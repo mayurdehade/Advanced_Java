@@ -1,3 +1,4 @@
+Notes:
 - Dependency Injection
     - Classes should not instantiate their dependency or create new object
     - Classes should only use the object that is given to them (Creating and using are two different things)
