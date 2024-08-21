@@ -1,5 +1,7 @@
 //Singleton: Ensures that a class has only one instance and provides a global point of access to it.
-//Singleton: means single bean definition to a single object instance per Spring IOC container. 
+//Singleton: means single bean definition to a single object instance per Spring IOC container.
+
+//Prototype: The Prototype Design Pattern is used to create objects based on a template of an existing object through cloning.
 //Prototype: means a single bean definition to any number of object instances.
 package com.controller;
 
