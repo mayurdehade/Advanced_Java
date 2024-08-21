@@ -3,6 +3,7 @@ package com.jbk.dao;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +14,13 @@ import com.jbk.model.Department;
 @Repository
 public class DepartmentDao {
 
-	List<Department> departmentList = new ArrayList<Department>();
+	// @Autowire is used to automatically creation of object for that we create
+	// configuration class and use @Bean annotation because
+	// List class is default class in java
+	@Autowired
+	List<Department> departmentList;
+
+//	List<Department> departmentList = new ArrayList<Department>();
 
 	public String addDepartment(Department department) {
 		boolean isExist = false;

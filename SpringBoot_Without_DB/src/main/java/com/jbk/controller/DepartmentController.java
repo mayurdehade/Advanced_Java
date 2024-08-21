@@ -17,16 +17,14 @@ import com.jbk.service.DepartmentService;
 @RestController
 public class DepartmentController {
 
-	// Here we manually created object to access methods of DepartmentService class
-	// methods
-//	DepartmentService service = new DepartmentService();
+	// Here we manually created object to access methods of DepartmentService class methods
+	// DepartmentService service = new DepartmentService();
 
 	// Using @Autowire annotation to automatically creating of object using IOC
 	// these object is null without @Autowire caused exception null object
 	// use @Component annotation to class
 	@Autowired
 	private DepartmentService service;
-	
 
 	@PostMapping("/add-department")
 	public String addDepartment(@RequestBody Department department) {
